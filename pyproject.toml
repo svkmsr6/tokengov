@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tokengov"
+version = "0.1.0"
+description = "Treat LLM spend like cloud spend: token tracking, budgets, caching, and routing for LLM workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Souvik Misra", email = "svkmsr6@gmail.com" }]
+keywords = ["llm", "tokens", "cost", "governance", "budget", "routing", "caching"]
+dependencies = [
+    "pydantic>=2.0",
+    "tiktoken>=0.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+tokengov = "tokengov.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"examples/**" = ["E402"]
+"tests/**" = ["B017"]
