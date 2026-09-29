@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tokengov"
+name = "tokengov-svkmsr6"
 version = "0.1.0"
 description = "Treat LLM spend like cloud spend: token tracking, budgets, caching, and routing for LLM workflows."
 readme = "README.md"
