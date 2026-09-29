@@ -35,8 +35,7 @@ flowchart LR
 ## Install
 
 ```bash
-pip install .            # from a checkout
-pip install ".[dev]"     # with pytest + ruff
+pip install tokengov
 ```
 
 ## Usage
