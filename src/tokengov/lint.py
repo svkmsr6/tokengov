@@ -75,8 +75,7 @@ def lint_text(
                     LintFinding(
                         rule=f"filler:{rule}",
                         severity="warn",
-                        message=f"{len(hits)}x occurrence(s) of a known "
-                        f"filler phrase on this line",
+                        message=f"{len(hits)}x occurrence(s) of a known filler phrase on this line",
                         line=i,
                         tokens_wasted=sum(count_tokens(m) for m in hits),
                     )
